@@ -4,14 +4,10 @@ import { footerLinks, socialMedia } from '../constants'
 
 const Footer = () => {
   return (
-    <section className={`${styles.flexCenter} ${styles.paddingY} flex-col`}>
+    <section className={`${styles.flexCenter} ${styles.paddingY} flex-col px-[15%]`}>
+
       <div className={`${styles.flexStart} md:flex-row flex-col mb-8 w-full`}>
         <div className='flex-1 flex flex-col justify-start mr-10'>
-          {/* <img
-            src={logo}
-            alt='logo'
-            className='w-[266px] h-[172px] object-contain'
-          /> */}
           <p className={`${styles.paragraph} mt-4 max-w-[310px]`}>
             An easy way to understand the algorithms.         
           </p>

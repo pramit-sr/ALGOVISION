@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from '../style'; // Assuming styles are defined elsewhere
+import { Link } from 'react-router-dom'; // Import Link for internal navigation
 
 // InfoCard Component
 const InfoCard = ({ title, description, algorithms, link }) => {
@@ -14,32 +14,21 @@ const InfoCard = ({ title, description, algorithms, link }) => {
           </li>
         ))}
       </ul>
-      {/* Explore Button */}
-      <a
-        href={link} // External link (opens in the same tab by default)
+      {/* Use Link instead of <a href> for internal navigation */}
+      <Link
+        to={link} // Internal link (navigates within React app)
         className="inline-block px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600"
       >
         Explore
-      </a>
+      </Link>
     </div>
   );
 };
 
 // Main App Component
 const App = () => {
-  const sortingAlgorithms = [
-    'Quick Sort',
-    'Merge Sort',
-    'Bubble Sort',
-    'Selection Sort',
-  ];
-
-  const searchingAlgorithms = [
-    'Binary Search',
-    'Linear Search',
-    'Ternary Search',
-  ];
-
+  const sortingAlgorithms = ['Quick Sort', 'Merge Sort', 'Bubble Sort', 'Selection Sort'];
+  const searchingAlgorithms = ['Binary Search', 'Linear Search', 'Ternary Search'];
   const pathfindingAlgorithms = [
     "Dijkstra's Algorithm",
     'A* Search Algorithm',
@@ -55,19 +44,19 @@ const App = () => {
           title="Searching Algorithms"
           description="Searching algorithms are techniques for finding specific data within a structure, such as an array or list."
           algorithms={searchingAlgorithms}
-          link="https://algovision-searching.vercel.app/" // External link for Searching Algorithms
+          link="/searching" // Internal link
         />
         <InfoCard
           title="Sorting Algorithms"
           description="Sorting algorithms are methods for rearranging a list of items in a specific order, typically ascending or descending."
           algorithms={sortingAlgorithms}
-          link="https://algovision-sorting.vercel.app/" // External link for Sorting Algorithms
+          link="/sorting" // Internal link
         />
         <InfoCard
           title="Pathfinding Algorithms"
           description="Pathfinding algorithms are used to determine the best path from one point to another within a graph or grid."
           algorithms={pathfindingAlgorithms}
-          link="https://algovision-pathfinding-algorithm.vercel.app/" // External link for Pathfinding Algorithms
+          link="/pathfinding" // Internal link
         />
       </div>
     </div>

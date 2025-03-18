@@ -11,7 +11,7 @@ import LinearSearching from "./searching/LinearSearch";
 import BinarySearching from "./searching/BinarySearch";
 import TernarySearching from "./searching/TernarySearch";
 import ScrollToTop from "./components/ScrollToTop"; // Import the ScrollToTop component
-
+import Sorting from "./pages/Sorting";
 const AppContent = () => {
   const location = useLocation();
 
@@ -20,6 +20,7 @@ const AppContent = () => {
     "/searching/linearsearching",
     "/searching/binarysearching",
     "/searching/ternarysearching",
+    "/sorting"
   ];
 
   return (
@@ -43,6 +44,7 @@ const AppContent = () => {
         <Route path="/searching/linearsearching" element={<LinearSearching />} />
         <Route path="/searching/binarysearching" element={<BinarySearching />} />
         <Route path="/searching/ternarysearching" element={<TernarySearching />} />
+        <Route path="/sorting" element={<Sorting />} />
       </Routes>
 
       <Footer />

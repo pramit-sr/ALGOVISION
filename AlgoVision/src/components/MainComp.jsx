@@ -29,13 +29,6 @@ const InfoCard = ({ title, description, algorithms, link }) => {
 const App = () => {
   const sortingAlgorithms = ['Quick Sort', 'Merge Sort', 'Bubble Sort', 'Selection Sort'];
   const searchingAlgorithms = ['Binary Search', 'Linear Search', 'Ternary Search'];
-  const pathfindingAlgorithms = [
-    "Dijkstra's Algorithm",
-    'A* Search Algorithm',
-    'Breadth-First Search (BFS)',
-    'Depth-First Search (DFS)',
-    'Bellman-Ford Algorithm',
-  ];
 
   return (
     <div className="flex flex-col items-center">

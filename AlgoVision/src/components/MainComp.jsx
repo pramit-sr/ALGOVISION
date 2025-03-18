@@ -52,12 +52,6 @@ const App = () => {
           algorithms={sortingAlgorithms}
           link="/sorting" // Internal link
         />
-        <InfoCard
-          title="Pathfinding Algorithms"
-          description="Pathfinding algorithms are used to determine the best path from one point to another within a graph or grid."
-          algorithms={pathfindingAlgorithms}
-          link="/pathfinding" // Internal link
-        />
       </div>
     </div>
   );

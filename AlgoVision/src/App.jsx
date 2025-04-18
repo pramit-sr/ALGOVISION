@@ -24,6 +24,7 @@ import QuickSort from "./sorting/QuickSort";
 import MergeSort from "./sorting/MergeSort";
 import BubbleSort from "./sorting/BubbleSort";
 import SelectionSort from "./sorting/SelectionSort";
+import InsertionSort from "./sorting/InsertionSort";
 
 const MobileWarning = () => {
   return (
@@ -55,6 +56,7 @@ const AppContent = () => {
     "/sorting/mergesort",
     "/sorting/bubblesort",
     "/sorting/selectionsort",
+    "/sorting/insertionsort",
   ];
 
   if (isMobile) return <MobileWarning />;
@@ -90,6 +92,7 @@ const AppContent = () => {
         <Route path="/sorting/mergesort" element={<MergeSort />} />
         <Route path="/sorting/bubblesort" element={<BubbleSort />} />
         <Route path="/sorting/selectionsort" element={<SelectionSort />} />
+        <Route path="/sorting/insertionsort" element={<InsertionSort />} />
       </Routes>
 
       <Footer />

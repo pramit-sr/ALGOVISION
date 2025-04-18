@@ -9,7 +9,7 @@ const Sorting = () => {
 
         <p className="text-lg mb-8 text-center max-w-2xl">
           Sorting algorithms arrange elements in a particular order (ascending or descending).
-          Explore Quick Sort, Merge Sort, Bubble Sort, and Selection Sort visualizations.
+          Explore Quick Sort, Merge Sort, Bubble Sort, Selection Sort, and Insertion Sort visualizations.
         </p>
 
         <div className="flex flex-wrap justify-center gap-6">
@@ -24,6 +24,9 @@ const Sorting = () => {
           </Link>
           <Link to="/sorting/selectionsort" className="bg-green-500 px-6 py-3 rounded-md shadow-lg hover:bg-green-600">
             Selection Sort
+          </Link>
+          <Link to="/sorting/insertionsort" className="bg-pink-500 px-6 py-3 rounded-md shadow-lg hover:bg-pink-600">
+            Insertion Sort
           </Link>
         </div>
       </div>

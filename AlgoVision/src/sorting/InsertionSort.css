@@ -1,0 +1,22 @@
+.array-item {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #f87171; /* red-400 */
+    font-size: 18px;
+    font-weight: bold;
+    margin: 5px;
+    border-radius: 8px;
+    transition: transform 0.3s, background-color 0.3s;
+  }
+  
+  .array-item.bg-blue-500 {
+    transform: scale(1.2);
+  }
+  
+  .array-item.bg-yellow-500 {
+    transform: scale(1.2);
+  }
+  

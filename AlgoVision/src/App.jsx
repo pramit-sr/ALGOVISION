@@ -11,12 +11,19 @@ import Hero from "./components/Hero";
 import Stats from "./components/Stats";
 import MainComp from "./components/MainComp";
 import Page from "./components/Page";
+import ScrollToTop from "./components/ScrollToTop";
+
 import Searching from "./pages/Searching";
+import Sorting from "./pages/Sorting";
+
 import LinearSearching from "./searching/LinearSearch";
 import BinarySearching from "./searching/BinarySearch";
 import TernarySearching from "./searching/TernarySearch";
-import ScrollToTop from "./components/ScrollToTop";
-import Sorting from "./pages/Sorting";
+
+import QuickSort from "./sorting/QuickSort";
+import MergeSort from "./sorting/MergeSort";
+import BubbleSort from "./sorting/BubbleSort";
+import SelectionSort from "./sorting/SelectionSort";
 
 const MobileWarning = () => {
   return (
@@ -34,7 +41,6 @@ const AppContent = () => {
   useEffect(() => {
     const checkMobile = () => setIsMobile(window.innerWidth < 768);
     checkMobile();
-
     window.addEventListener("resize", checkMobile);
     return () => window.removeEventListener("resize", checkMobile);
   }, []);
@@ -45,6 +51,10 @@ const AppContent = () => {
     "/searching/binarysearching",
     "/searching/ternarysearching",
     "/sorting",
+    "/sorting/quicksort",
+    "/sorting/mergesort",
+    "/sorting/bubblesort",
+    "/sorting/selectionsort",
   ];
 
   if (isMobile) return <MobileWarning />;
@@ -55,6 +65,7 @@ const AppContent = () => {
       {!hiddenNavbarRoutes.includes(location.pathname) && <Navbar />}
 
       <Routes>
+        {/* Home */}
         <Route
           path="/"
           element={
@@ -66,20 +77,19 @@ const AppContent = () => {
             </div>
           }
         />
+
+        {/* Searching */}
         <Route path="/searching" element={<Searching />} />
-        <Route
-          path="/searching/linearsearching"
-          element={<LinearSearching />}
-        />
-        <Route
-          path="/searching/binarysearching"
-          element={<BinarySearching />}
-        />
-        <Route
-          path="/searching/ternarysearching"
-          element={<TernarySearching />}
-        />
+        <Route path="/searching/linearsearching" element={<LinearSearching />} />
+        <Route path="/searching/binarysearching" element={<BinarySearching />} />
+        <Route path="/searching/ternarysearching" element={<TernarySearching />} />
+
+        {/* Sorting */}
         <Route path="/sorting" element={<Sorting />} />
+        <Route path="/sorting/quicksort" element={<QuickSort />} />
+        <Route path="/sorting/mergesort" element={<MergeSort />} />
+        <Route path="/sorting/bubblesort" element={<BubbleSort />} />
+        <Route path="/sorting/selectionsort" element={<SelectionSort />} />
       </Routes>
 
       <Footer />

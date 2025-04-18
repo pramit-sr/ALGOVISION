@@ -27,7 +27,7 @@ const InfoCard = ({ title, description, algorithms, link }) => {
 
 // Main App Component
 const App = () => {
-  const sortingAlgorithms = ['Quick Sort', 'Merge Sort', 'Bubble Sort', 'Selection Sort'];
+  const sortingAlgorithms = ['Quick Sort', 'Merge Sort', 'Bubble Sort', 'Selection Sort', 'Insertion Sort'];
   const searchingAlgorithms = ['Binary Search', 'Linear Search', 'Ternary Search'];
 
   return (
